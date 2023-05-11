@@ -1,0 +1,116 @@
+<!-- Ready for content.htm -->
+<div style='width: 650px; margin-top: 0px;'>
+    <p style='margin-top: 0px;'>Now that the we have the bulk of the app created and functional, it's time to work on how we'll be presenting the content, which is what this is ultimately all about.</p>
+    <p>The actual content will be housed in an HTML control, in its Html text property. Now before you get concerned that you don't know HTML, don't worry.  I'll be showing you exactly what you'll need to learn and how to apply it.  You'll be surprised what you will be able to do.</p>
+    <p>For this first step, we'll be creating an HTML control as a template with all relevant properties set except for the actual Html text.  The HtmlText and BorderThickness will be the only properties that are unique to each HTML control instance.  Let's go!</p>
+    <ol>
+       <li>Before we start, make sure you've saved any previous work and have done a publish</li>
+       <li>Once saved and published, click on conLessonContent in the Tree view</li>
+       <li>While you are at it, hold the Alt key down, and select the first gallery item, What is this</li>
+       <li>Then from the top toolbar, click on +Insert</li>
+       <li>Locate and select the HTML text control, found under the Display section</li>
+       <li>Let's go ahead and rename it to: htmTemplate</li>
+       <li>Update its properties as follows<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td width='400'>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>X</td>
+                   <td>Parent.PaddingLeft</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Y</td>
+                   <td>0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Width</td>
+                   <td>Parent.Width - (Parent.PaddingLeft + Parent.PaddingRight)</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Visible</td>
+                   <td>galLessonMenu.Selected.intId = Self.BorderThickness</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Size</td>
+                   <td>Leave default of 11, you can adjust later if you need</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>PaddingTop</td>
+                   <td>0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>HtmlText</td>
+                   <td>&quot;This is content for - &quot; & galLessonMenu.Selected.strTitle </td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Height</td>
+                   <td>Parent.Height</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>BorderThickness</td>
+                   <td>1010</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>BorderStyle</td>
+                   <td>BorderStyle.None</td>
+                </tr>
+             </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>So now we have our template for adding content pages</li>
+       <li>You will be selecting this template and copying/pasting for each new page</li>
+       <li>For the purpose of this tutorial, we will be adding 4 copies under conLessonContent</li>
+       <li>To start, select htmTemplate, over in the … menu, select copy, or Ctrl-C, Mac Cmd-C</li>
+       <li>Then at the … menu of conLessonContent, click on Paste</li>
+       <li>Do this 3 more times, should have total of 4 template copies, other than the original</li>
+       <li>I tend to name the HTML controls close to what its associated menu name is</li>
+       <li>So we will then rename them as follows<br/> 
+          <ol type='a'>
+             <li>htmWhatIsThis</li>
+             <li>htmPrerequisites</li>
+             <li>htmInterestingContent</li>
+             <li>htmMoreGoodStuff</li>
+          </ol>
+       </li>
+       <li>We don't use borders, so we will be repurposing the BorderThickness property to hold the 
+         intId of each page. Update each HTML controls BorderThickness property with its intId<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Control</td>
+                   <td width='400'>BorderThickness</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>htmWhatIsThis</td>
+                   <td>1</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>htmPrerequisites</td>
+                   <td>5</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>htmInterestingContent</td>
+                   <td>10</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>htmMoreGoodStuff</td>
+                   <td>15</td>
+                </tr>
+             </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>Done!  You've completed the basic app.  The rest would be specific to your particular 
+          <br/> content you want to present.  You can now save, publish and run the app.<br/> 
+          <br/> Do make note that Saving/Loading data from local storage does not work when you just 
+          <br/> preview vs actually running.  So best to go back to the main app list of 
+          <br/> PowerApps and run the app from there.</li>
+    </ol>
+    <br/>
+ </div>

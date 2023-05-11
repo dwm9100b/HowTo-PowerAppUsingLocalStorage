@@ -1,0 +1,232 @@
+<!-- Now for Admin stuff.htm -->
+<div style='width: 650px; margin-top: 0px;'>
+    <p style='margin-top: 0px;'>Sometimes an app needs a way to work with global Admin 
+      type of actions, we do. We'll call this Admin stuff.</p>
+    <p>Here we will provide a means to clear all the Completed flags along with another option to 
+      actually delete the entire data file stored locally.  The data file will be recreated when 
+      the app is run again or refreshed.</p>
+    <ol>
+       <li>We will do this as bulk as we can</li>
+       <li>Over in the Tree view on the left</li>
+       <li>Click on conAdminStuff</li>
+       <li>We will have you click on +Insert from the top toolbar for each of the following, 
+         if you refrain from clicking on any controls, and just do the insert, they will be 
+         inserted in correct order<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Create Control</td>
+                   <td width='400'>Rename to</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text label</td>
+                   <td>lblAdminDescription</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text label</td>
+                   <td>lblResetDescription</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Button</td>
+                   <td>btnAdminReset</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text label</td>
+                   <td>lblDeleteDescription</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Button</td>
+                   <td>btnAdminDelete</td>
+                </tr>
+             </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>Once you have added all 5 controls lets go change some properties</li>
+       <li>First, select the 3 Text label controls together and change the following group properties<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td width='400'>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>AutoHeight</td>
+                   <td>true</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Size</td>
+                   <td>13</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Width</td>
+                   <td>450</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Wrap</td>
+                   <td>true</td>
+                </tr>
+             </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>Then select the 2 button controls together and edit the following group properties<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td width='400'>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Height</td>
+                   <td>40</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Size</td>
+                   <td>15</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Width</td>
+                   <td>200</td>
+                </tr>
+             </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>Click on <b>lblAdminDescription</b> only and add this to the Text property<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td width='400'>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text</td>
+                   <td>&quot;This page will be used for any Admin related functions&quot;</td>
+                </tr>
+             </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>Now click on <b>lblResetDescription</b> and add this to the Text property<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td width='400'>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text</td>
+                   <td>&quot;First up will be our reset completed function. As the name implies 
+                     pressing this button will reset all completed to be false. It will 
+                     also save this data which will let you start over.&quot;</td>
+                </tr>
+             </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>Click on <b>lblDeleteDescription</b> and add this to the Text property<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td width='400'>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text</td>
+                   <td>&quot;Next is the delete data file button. In case there is an update 
+                     to the data, app or the app just not operating right. Click this 
+                     button. After pressing the Delete Data File button, close and reload 
+                     the app (or just refresh in the web view). This allows for a new data 
+                     file to be created, clean slate.&quot;</td>
+                </tr>
+             </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>If you want to see how things are progressing visually, hold the Alt key down and 
+          <br/>press Admin stuff in the left gallery menu of the app.  There ya go!</li>
+       <br/> 
+       <li>Great! Now let's work with our buttons, click on <b>btnAdminReset</b>, update its properties<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td width='400'>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text</td>
+                   <td>&quot;Reset Completed&quot;</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>OnSelect</td>
+                   <td>
+<pre><code><span style='color: #b54b8c;'>// Reset all completed bits to false</span>
+ UpdateIf(colMenuItems, 
+   blnCompleted, 
+   {blnCompleted: false});
+ 
+<span style='color: #b54b8c;'>// Now do a reset on the gallery</span>
+Reset(galLessonMenu);
+ 
+<span style='color: #b54b8c;'>// Make sure to save the data status</span>
+SaveData(colMenuItems, gblDataFile); 
+
+</code></pre>
+                   </td>
+                </tr>
+             </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>Click on <b>btnAdminDelete</b> and update its properties as follows<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td width='400'>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text</td>
+                   <td>&quot;Delete Data File&quot;</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>OnSelect</td>
+                   <td>ClearData(gblDataFile)</td>
+                </tr>
+             </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>One last item to update, click on the <b>conLessonContent</b> control in the Tree view</li>
+       <li>Update the following property<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td width='400'>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Visible</td>
+                   <td>!conAdminStuff.Visible</td>
+                </tr>
+             </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>This completes the Admin section for now.  If everything went in correctly you should be able
+         to preview the app and only see the Admin section when its item in the left gallery menu
+         is clicked on. Of course you would have to have set the intId for Admin to be 1000.
+      </li>
+    </ol>
+    <br/>
+ </div>

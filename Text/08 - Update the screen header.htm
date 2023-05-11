@@ -1,0 +1,160 @@
+<!-- Update the screen header.htm -->
+<div style='width: 650px; margin-top: 0px;'>
+    <p style='margin-top: 0px;'>Now that most functionality is present, lets update our screen header.</p>
+    <ol>
+       <li>Select the control conScreenHeader in the Tree view</li>
+       <li>Then from the top toolbar, click on +Insert</li>
+       <li>Locate and select the Text label control</li>
+       <li>Rename this one: lblPctComplete</li>
+       <li>Now let's do it again, click on +Insert</li>
+       <li>Select Text label</li>
+       <li>Rename this one: lblAppTitle</li>
+       <li>And again, click on +Insert</li>
+       <li>Select Text label</li>
+       <li>Rename it: lblMinsRemaining<br/></li>
+       <li>Now select all 3, on Mac its Shift+Click on each</li>
+       <li>We can now edit common properties<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td width='400'>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>X</td>
+                   <td>0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Y</td>
+                   <td>0</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Width</td>
+                   <td>250</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>VerticalAlign</td>
+                   <td>VerticalAlign.Middle</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Size</td>
+                   <td>13</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Height</td>
+                   <td>Parent.Height</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Color</td>
+                   <td>Color.White</td>
+                </tr>
+             </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>Ok, let's work on <b>lblPctComplete</b>, in the Tree view, click it</li>
+       <li>Update its properties as follows<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td width='400'>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                  <td>X</td>
+                  <td>30</td>
+               </tr>
+               <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                  <td>Y</td>
+                  <td>0</td>
+               </tr>
+               <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text</td>
+                   <td>
+<pre><code>RoundUp( 
+   If(CountIf(colMenuItems,blnCompleted) > 0, 
+ 
+      <span style='color: #b54b8c;'>// If there are items completed, Count them then</span>
+      <span style='color: #b54b8c;'>// divide that by the count of items that have minutes</span>
+      (CountIf(colMenuItems,blnCompleted) /
+      (CountIf(colMenuItems,intTime > 0)) * 100),
+      
+      <span style='color: #b54b8c;'>// No items completed, means 0</span>
+      0
+   ),
+ 
+   <span style='color: #b54b8c;'>// Round up to 0 decimal places</span>
+   0 
+ 
+) & &quot;% completed&quot;
+</code></pre>
+                   </td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                  <td>Align</td>
+                  <td>Align.Left</td>
+               </tr>
+            </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>Now click on <b>lblAppTitle</b> in the Tree view</li>
+       <li>Update its properties as follows<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td width='400'>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                  <td>X</td>
+                  <td>(App.Width - Self.Width) / 2</td>
+               </tr>
+               <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                  <td>Width</td>
+                  <td>450</td>
+              </tr>
+                     <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text</td>
+                   <td>gblAppTitle</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                  <td>Align</td>
+                  <td>Align.Center</td>
+               </tr>
+            </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>Last up, click on <b>lblMinsRemaining</b></li>
+       <li>Update its properties as follows<br/> 
+          <br/> 
+          <table style='margin-left: 25px; border-collapse: collapse;'>
+             <tbody>
+                <tr style='font-weight: bold; background-color: lightgrey; vertical-align: top;'>
+                   <td width='170'>Property</td>
+                   <td width='400'>Value</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                  <td>X</td>
+                  <td>App.Width - Self.Width - 20</td>
+              </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                   <td>Text</td>
+                   <td>Sum(colMenuItems, intTime) - Sum(Filter(colMenuItems, blnCompleted), intTime) & &quot; minutes remaining&quot;</td>
+                </tr>
+                <tr style='border-bottom: 1px solid black; vertical-align: top;'>
+                  <td>Align</td>
+                  <td>Align.Right</td>
+               </tr>
+            </tbody>
+          </table> 
+          <br/> 
+       </li>
+       <li>Our screen header is done</li>
+    </ol>
+    <br/>
+ </div>
