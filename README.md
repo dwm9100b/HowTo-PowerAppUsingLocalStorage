@@ -19,5 +19,19 @@ Features of the app:
 
 Hopefully you'll find this a useful tool and perhaps learn something new along the way.
 
+To use:
+
+1. Click on the green "Code" button above
+2. Click on Download ZIP
+3. Unzip the downloaded zip
+4. Note where you downloaded this zip
+5. From within your PowerApp studio
+6. Select Apps in the left nav
+7. From the top nav, select Import canvas app
+8. When asked, navigate to the unzipped location
+9. Select the app zip file under the App folder
+10. Then follow the prompts
+11. Once imported, publish and run the app
+
 Enjoy,
 Dale
