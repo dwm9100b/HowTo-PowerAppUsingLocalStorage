@@ -29,7 +29,7 @@ To use:
 6. Select Apps in the left nav
 7. From the top nav, select Import canvas app
 8. When asked, navigate to the unzipped location
-9. Select the app zip file under the App folder
+9. Select the app zip file
 10. Then follow the prompts
 11. Once imported, publish and run the app
 
